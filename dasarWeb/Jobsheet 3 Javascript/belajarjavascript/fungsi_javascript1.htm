@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contoh Gabungan JS</title>
+    <script type="text/javascript">
+        // Fungsi menampilkan alert
+        var sayHello = () => alert("Hello World!");
+
+        // Fungsi menjumlahkan dua angka
+        function total(numberA, numberB) {
+            return numberA + numberB;
+        }
+    </script>
+</head>
+<body>
+    <!-- Memanggil fungsi saat link diklik -->
+    <a href="#" onclick="sayHello()">Klik Aku!</a>
+    <br><br>
+    <!-- Menampilkan hasil penjumlahan -->
+    Hasil penjumlahan 2 + 3 = <span id="hasil"></span>
+
+    <script type="text/javascript">
+        // Menampilkan hasil penjumlahan di span
+        document.getElementById("hasil").innerText = total(2, 3);
+    </script>
+</body>
+</html>
