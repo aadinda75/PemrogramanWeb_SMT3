@@ -1,0 +1,90 @@
+/* === Container utama form upload === */
+.upload-form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+
+    /* Tambahan untuk membuat posisi form di tengah layar */
+    position: absolute;          /* Bisa diposisikan bebas */
+    top: 50%;                    /* Tengah secara vertikal */
+    left: 50%;                   /* Tengah secara horizontal */
+    transform: translate(-50%, -50%); /* Koreksi posisi agar benar-benar di tengah */
+}
+
+/* === Judul === */
+h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+/* === Area input file === */
+.file-input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+/* === Input file disembunyikan (diganti label custom) === */
+.file-input {
+    display: none;
+}
+
+/* === Label custom untuk tombol "Pilih File" === */
+.file-label {
+    background: #3498db;    /* Biru cerah */
+    color: #fff;            /* Teks putih */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease; /* Efek halus saat hover */
+}
+
+.file-label:hover {
+    background: #2980b9; /* Biru sedikit lebih gelap saat hover */
+}
+
+/* === Nama file yang ditampilkan setelah dipilih === */
+.file-name {
+    margin-left: 10px;
+    color: #555;
+    font-size: 14px;
+    font-style: italic;
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; /* Biar nama file panjang tidak pecah baris */
+}
+
+/* === Tombol unggah === */
+.upload-button {
+    background: #2ecc71;    /* Hijau */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.5;           /* Tombol awal tidak aktif */
+    transition: background 0.3s ease, opacity 0.3s ease;
+}
+
+/* Saat tombol aktif (enabled) */
+.upload-button:not(:disabled):hover {
+    background: #27ae60; /* Hijau lebih gelap saat hover */
+}
+
+/* Saat tombol belum aktif */
+.upload-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* === Pesan status hasil upload === */
+.upload-status {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #333;
+}
